@@ -10,20 +10,14 @@ import ru.javavision.model.Engine;
 /**
  * Created : 26/11/2017.
  */
-//public class EngineDAO implements Idao<Engine, String> {
-public class EngineDAO implements Idao<Engine, Integer> {
-	public Engine read5(Integer key) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+public class EngineDAO2 implements Idao<Engine, String> {
 
-	
     /**
      * Connection factory to database.
      */
     private final SessionFactory factory;
 
-    public EngineDAO(@NotNull final SessionFactory factory) {
+    public EngineDAO2(@NotNull final SessionFactory factory) {
         this.factory = factory;
     }
 
@@ -43,23 +37,23 @@ public class EngineDAO implements Idao<Engine, Integer> {
             session.getTransaction().commit();
         }
     }
-    @Override
-	public Engine get(Engine entity, Integer id) {
+
+	@Override
+	public Engine get(@NotNull Engine entity, Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
     /**
-     * Get engine by id.
+     * Get engine by model.
      *
      * @param model for select.
      * @return engine with param model.
      */
     @Override
-//    public Engine read(@NotNull final String model) {
-    public Engine read(@NotNull final Integer id) {
+    public Engine read(@NotNull final String model) {
         try (final Session session = factory.openSession()) {
 
-            final Engine result = session.get(Engine.class, id);
+            final Engine result = session.get(Engine.class, model);
 
             return result != null ? result : new Engine();
         }
@@ -100,5 +94,4 @@ public class EngineDAO implements Idao<Engine, Integer> {
     }
 
  
-
 }
