@@ -6,7 +6,8 @@ import ru.javavision.dao.DAO;
 import ru.javavision.dao.EngineDAO;
 import ru.javavision.model.Engine;
 
-/**
+/** Error: Could not find or load main class ru.javavision.ApplicationDemo
+Caused by: java.lang.ClassNotFoundException: ru.javavision.ApplicationDemo
  * Created : 26/11/2017.
  */
 public class ApplicationDemo {
