@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * Created : 26/11/2017.
  */
 @Entity
-@Table(name="Engine", schema="public")
+@Table(name="Engine", schema="pavel")
 public class Engine  implements Serializable {
 	private static final long serialVersionUID = 1L;
 

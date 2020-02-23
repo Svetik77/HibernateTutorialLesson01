@@ -44,9 +44,13 @@ public class EngineDAO implements Idao<Engine, Integer> {
         }
     }
     @Override
-	public Engine get(Engine entity, Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Engine get(@NotNull Engine entity, final Integer id) {
+        try (final Session session = factory.openSession()) {
+
+            final Engine result = session.get(Engine.class, id);
+
+            return result != null ? result : new Engine();
+        }
 	}
     /**
      * Get engine by id.

@@ -14,8 +14,8 @@ CREATE TABLE IF NOT EXISTS  public.engine1
 )
  
 
-INSERT INTO engine1 (model, power) VALUES ('engine_model_01', 1250);
-INSERT INTO engine1 (model, power) VALUES ('engine_model_02', 2820);
+INSERT INTO engine (model, power) VALUES ('engine_model_00', 1250);
+INSERT INTO engine (model, power) VALUES ('engine_model_02', 2820);
 
 --CREATE TABLE IF NOT EXISTS engine1 (
 --  id    SERIAL PRIMARY KEY,
