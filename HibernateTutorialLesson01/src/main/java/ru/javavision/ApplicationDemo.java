@@ -18,7 +18,6 @@ public class ApplicationDemo {
     public static void main(String[] args) {
 //        PropertyConfigurator.configure("/log4j.properties");
         SessionFactory factory = null;
-        
 
         try {
 //        	logger.debug("Log4j appender configuration is successful !!");
