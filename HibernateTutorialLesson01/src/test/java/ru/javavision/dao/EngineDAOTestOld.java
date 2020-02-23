@@ -50,7 +50,7 @@ class EngineDAOTestOld {
      * @see ru.javavision.dao.EngineDAO#create(Engine).
      * @see ru.javavision.dao.EngineDAO#read(Object).
      */
-    @Test
+//    @Test
     public void whenCreateEngineThenEngineIsExist() {
         engineDAO.create(testEngine);
         final Engine result = engineDAO.read(1);
@@ -60,7 +60,7 @@ class EngineDAOTestOld {
     /**
      * @see ru.javavision.dao.EngineDAO#update(Engine).
      */
-    @Test
+//    @Test
     public void whenEngineUpdateThenPowerHasNewValue() {
         engineDAO.create(testEngine);
         testEngine.setPower(2);
@@ -72,7 +72,7 @@ class EngineDAOTestOld {
     /**
      * @see ru.javavision.dao.EngineDAO#delete(Engine).
      */
-    @Test
+//    @Test
     public void whenEngineDeleteThenEngineNotExist() {
         engineDAO.create(testEngine);
         final Engine before = engineDAO.read(2);
