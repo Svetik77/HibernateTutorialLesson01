@@ -18,7 +18,7 @@ import ru.javavision.model.Engine;
 class EngineDAOTest {
 	private static SessionFactory factory;
 	private static Idao<Engine, Integer> engineDAO;
-	private final Engine testEngine = new Engine();
+
 	private static int unique1ID;
 	private static int createID;
 	private static int delete2ID;
@@ -153,13 +153,16 @@ class EngineDAOTest {
  
 
  	@Test
-	void testRead () {
-		engineDAO.create(testEngine);
-		Engine engine = engineDAO.get(testEngine, 1);
-		System.out.println(testEngine + " \n----------- " + engine);
-		final Engine result = engineDAO.read(1);
- 		assertThat(testEngine, is(result));
+	void testReadGet () {
+ 		System.err.println("-----testReadGet------");
+        final Engine testEngine = new Engine();
+		Engine engine = engineDAO.get(testEngine, unique1ID);
+		final Engine result = engineDAO.read(unique1ID);
+		
+		System.out.println("engine: " + engine + " \n-----------\nresult " + engine);
+ 		assertThat(engine, is(result));
 
 		assertTrue((engine) != null);
+		System.err.println("-----testReadGet--end----");
 	}
 }
